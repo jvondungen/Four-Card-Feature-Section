@@ -1,0 +1,33 @@
+:root{
+    --red:#EA5454;
+    --cyan:#44D3D2;
+    --orange:#FCAE4A;
+    --blue:#549EF2;
+    --gray:#4D4F62;
+
+    --white:#FAFAFA;
+    --Navy: hsl(234, 12%, 34%);
+    --GrayBlue: hsl(229, 6%, 66%);
+    --LGray: hsl(0, 0%, 98%);
+
+    --font:Poppins;
+}
+
+*{box-sizing: border-box;
+margin:0;
+padding:0;
+color:var(--gray);
+font-family: var(--font);}
+
+body{background-color: var(--white);
+    display:flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items: center;
+    height:100vh;
+
+}
+
+.container{display:grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 5fr;}
