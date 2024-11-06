@@ -23,7 +23,7 @@ font-size:15px;}
 body{background-color: var(--white);
     display:flex;
     flex-direction:column;
-    justify-content: center;
+    justify-content: start;
     align-items: center;
     height:100vh;
 
@@ -31,16 +31,18 @@ body{background-color: var(--white);
 /* For Screens Smaller than 1200px */
 
 .container{display:grid;
-    grid-template-rows: 5fr;
+    grid-template-columns: 3fr;
+    grid-template-rows: repeat(5, 1fr);
     width: 311px;
     gap:20px;
-    padding-top: 20vh;
+    padding-top: 10vh;
     padding-bottom: 20px;
     
 }
 
-.header{display:grid;
-    grid-template-rows: 3fr;
+.header{
+    display:grid;
+    grid-template-rows: auto auto 1fr;
 justify-content: center;
 text-align: center;
 padding-bottom: 40px;
@@ -61,15 +63,15 @@ line-height: 25px;
 }
 
 .supervisor, .team, .karma, .calculator {display:grid;
-    grid-template-rows: 3fr;
+    grid-template-rows: auto auto auto;
     padding:20px;
     border-radius: 8px;
     box-shadow: 0 15px 30px -11px var(--Navy);
         }
-    .supervisor{border-top: solid 4px var(--cyan);}
-    .team{border-top: solid 4px var(--red);}
-    .karma{border-top: solid 4px var(--orange);}
-    .calculator{border-top: solid 4px var(--blue);}
+    .supervisor{border-top: solid 4px var(--cyan); }
+    .team{border-top: solid 4px var(--red); }
+    .karma{border-top: solid 4px var(--orange); }
+    .calculator{border-top: solid 4px var(--blue); }
 
 .card-header {font-weight:600;
         font-size: 20px;
@@ -85,19 +87,23 @@ line-height: 25px;
         justify-self: end;}
 
         /* For Desktop Screens 1200px and larger */
-    @media screen and (min-width:1200px){.container{display:grid;
-        grid-template-columns: 3fr;
-        grid-template-rows: 5fr;
-        width: 1110px;
-        gap:20px;
-        padding-top: 20vh;
-        padding-bottom: 20px;
-            }}
-    @media screen and (min-width:1200px) {.header{grid-column: 1/3;}
-}
+   /* For Desktop Screens 1200px and larger */
+   @media screen and (min-width:1200px){.container{display:grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: repeat(8, 1fr);
+    width: 1110px;
+    gap:0;
+    
+        }}
+    @media screen and (min-width:1200px) {.header{grid-column: 1/4;
+            grid-row:1;}
+    .header p{padding-left:20%;
+            padding-right:20%;}}
 
-@media screen and (min-width:1200px) {.team{grid-column: 2; grid-row: 2;}}
-@media screen and (min-width:1200px) {.supervisor{grid-column: 1; grid-row: 3;}}
-@media screen and (min-width:1200px) {.karma{grid-column: 2; grid-row: 4;}}
-@media screen and (min-width:1200px) {.calculator{grid-column: 3; grid-row: 3;}}
-@media screen and (min-width:1200px) {.supervisor, .team, .karma, .calculator{width:350px;}
+
+@media screen and (min-width:1200px) {.team{grid-column: 2; grid-row: 2; 
+margin-bottom:20px;}}
+@media screen and (min-width:1200px) {.supervisor{grid-column: 1; grid-row: 2;}}
+@media screen and (min-width:1200px) {.karma{grid-column: 2; grid-row: 3;}}
+@media screen and (min-width:1200px) {.calculator{grid-column: 3; grid-row: 2;}}
+@media screen and (min-width:1200px) {.supervisor, .team, .karma, .calculator{width:350px;}}
