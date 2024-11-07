@@ -32,8 +32,7 @@ body{background-color: var(--white);
 
 .container{display:grid;
     grid-template-columns: 1fr;
-   
-    width: 311px;
+       width: 311px;
     gap:20px;
     padding-top: 10vh;
     padding-bottom: 20px;
@@ -75,16 +74,18 @@ line-height: 25px;
 
 .card-header {font-weight:600;
         font-size: 20px;
+        padding-bottom: 20px;
     }
  .card-content {
         font-size: 13px;
         opacity: 50%;
         letter-spacing: .09px;
-        padding-bottom: 20px;
+        padding-bottom: 40px;
     }
     img{width: 57px;
     height:57px;
-        justify-self: end;}
+        justify-self: end;
+    }
 
         /* For Desktop Screens 1200px and larger */
    /* For Desktop Screens 1200px and larger */
